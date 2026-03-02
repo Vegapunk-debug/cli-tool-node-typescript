@@ -25,4 +25,13 @@ program
     console.log("Difference:",parseFloat(num1) - parseFloat(num2))
 })
 
+program
+.command("mul <num1> <num2>")
+.description("Multiplies two numbers")
+.action((num1: string, num2: string) => {
+    console.log("Product:",parseFloat(num1) * parseFloat(num2))
+})
+
+
+
 program.parse()
