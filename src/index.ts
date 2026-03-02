@@ -18,4 +18,11 @@ program
     console.log("Sum:",parseFloat(num1) + parseFloat(num2))
 })
 
+program
+.command("sub <num1> <num2>")
+.description("Subtracts two numbers")
+.action((num1: string, num2: string) => {
+    console.log("Difference:",parseFloat(num1) - parseFloat(num2))
+})
+
 program.parse()

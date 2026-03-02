@@ -6,8 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "link-cli": "npm run build && npm link",
     "start": "ts-node src/index.ts",
-    "build": "tsc"
-    
+    "build": "tsc",
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
