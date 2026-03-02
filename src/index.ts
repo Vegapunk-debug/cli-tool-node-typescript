@@ -39,5 +39,11 @@ program
     console.log("Quotient:",parseFloat(num1) / parseFloat(num2))
 })
 
+program
+.command("Name <firstname> <lastname>")
+.description("Prints the full name")
+.action((firstname: string, lastname: string) => {
+    console.log("Full Name:",firstname + " " + lastname)
+})
 
 program.parse()
