@@ -32,6 +32,12 @@ program
     console.log("Product:",parseFloat(num1) * parseFloat(num2))
 })
 
+program
+.command("div <num1> <num2>")
+.description("Divides two numbers")
+.action((num1: string, num2: string) => {
+    console.log("Quotient:",parseFloat(num1) / parseFloat(num2))
+})
 
 
 program.parse()
