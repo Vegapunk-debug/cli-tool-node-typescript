@@ -162,6 +162,19 @@ program
     }
 )
 
+program
+.command("weather <city>")
+.description("Current weather for a specified city")
+.action(async (city: string) => {
+    try {
+
+        const response = await axios.get(`https://wttr.in/${city}?format=3`)
+        console.log(`\n Weather of ${city}: ${response.data}`)
+    } catch (error: any) {
+        console.log("\n Error: Could not fetch weather for that location.\n",error.message)
+    }
+})
+
 
 
 
