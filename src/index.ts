@@ -150,7 +150,10 @@ program
             
             console.log(`\n--- GitHub User: ${response.data.login} ---`)
             console.log(`Name: ${response.data.name || "N/A"}`)
-            console.log(`Followers: ${response.data.followers}\n`)
+            console.log(`Followers: ${response.data.followers}`)
+            console.log(`Repositories: ${response.data.public_repos}\n`)
+            console.log(`Bio: ${response.data.bio}\n`)
+            console.log(`Profile URL: ${response.data.html_url}\n`)
         } 
         
         catch (error) {
