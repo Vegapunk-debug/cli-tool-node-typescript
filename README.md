@@ -105,12 +105,6 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 | `vegacli quote` | Fetches a random inspirational quote from the internet. |
 | `vegacli anime-char <name>` | Searches for an anime character and displays their details and bio. |
 
-## Features
-
-- **Modular Structure**: Built with TypeScript for better type safety and maintainability.
-- **User-Friendly**: Simple and intuitive command structure.
-- **Real-Time Data**: Integrates with external APIs to provide live information.
-- **Developer Friendly**: Includes code generation and security utilities.
 
 ## Contributing
 
