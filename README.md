@@ -1,8 +1,8 @@
-# MyCLI 
+# VegaCLI
 
 A versatile, multi-purpose Command Line Interface (CLI) tool built with Node.js, TypeScript, and Commander.js. This tool provides a robust collection of utilities ranging from basic math operations and system diagnostics to developer tools and live API integrations.
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
@@ -29,7 +29,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
    ```bash
    npm link
    ```
-   (Alternatively, use npm run link-cli if configured in your package.json).
+   (Alternatively, use npm run link-cli if configured in your package.json)
    ```bash
    npm run link-cli
    ```
@@ -40,31 +40,31 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 | Command | Description |
 | :--- | :--- |
-| `mycli greet <name>` | Displays a personalized greeting. |
-| `mycli add <num1> <num2>` | Adds two numbers. |
-| `mycli sub <num1> <num2>` | Subtracts the second number from the first. |
-| `mycli mul <num1> <num2>` | Multiplies two numbers. |
-| `mycli div <num1> <num2>` | Divides the first number by the second. |
-| `mycli name <firstname> <lastname>` | Concatenates and displays the full name. |
+| `vegacli greet <name>` | Displays a personalized greeting. |
+| `vegacli add <num1> <num2>` | Adds two numbers. |
+| `vegacli sub <num1> <num2>` | Subtracts the second number from the first. |
+| `vegacli mul <num1> <num2>` | Multiplies two numbers. |
+| `vegacli div <num1> <num2>` | Divides the first number by the second. |
+| `vegacli name <firstname> <lastname>` | Concatenates and displays the full name. |
 
 ### System & Developer Tools
 
 | Command | Description |
 | :--- | :--- |
-| `mycli sysinfo` | Shows detailed system information (Hostname, OS, Architecture). |
-| `mycli time` | Displays the current local date and time. |
-| `mycli express-base-code` | Generates a boilerplate `server.js` file for an Express.js application. |
-| `mycli bcrypt-hash <password>` | Securely hashes a given password using bcrypt. |
-| `mycli bcrypt-compare <password> <hash>` | Verifies if a password matches a given bcrypt hash. |
+| `vegacli sysinfo` | Shows detailed system information (Hostname, OS, Architecture). |
+| `vegacli time` | Displays the current local date and time. |
+| `vegacli express-base-code` | Generates a boilerplate `server.js` file for an Express.js application. |
+| `vegacli bcrypt-hash <password>` | Securely hashes a given password using bcrypt. |
+| `vegacli bcrypt-compare <password> <hash>` | Verifies if a password matches a given bcrypt hash. |
 
 ### API Integrations
 
 | Command | Description |
 | :--- | :--- |
-| `mycli github <username>` | Fetches and displays public information about a GitHub user. |
-| `mycli weather <city>` | Retrieves the current weather conditions for a specified city. |
-| `mycli quote` | Fetches a random inspirational quote from the internet. |
-| `mycli anime-char <name>` | Searches for an anime character and displays their details and bio. |
+| `vegacli github <username>` | Fetches and displays public information about a GitHub user. |
+| `vegacli weather <city>` | Retrieves the current weather conditions for a specified city. |
+| `vegacli quote` | Fetches a random inspirational quote from the internet. |
+| `vegacli anime-char <name>` | Searches for an anime character and displays their details and bio. |
 
 ## Features
 

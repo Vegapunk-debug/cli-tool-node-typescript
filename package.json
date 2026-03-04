@@ -28,6 +28,6 @@
     "typescript": "^5.9.3"
   },
   "bin": {
-    "mycli": "./dist/src/index.js"
+    "vegacli": "./dist/src/index.js"
   }
 }
