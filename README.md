@@ -1,5 +1,5 @@
 # VegaCLI
-<div align="center">
+
 ```text
   ┌────────────────────────────────────────────────┐
   │                                                │
@@ -14,6 +14,7 @@
   │           Command Line Tool                    │
   └────────────────────────────────────────────────┘
 ```
+
 <img src="https://raw.githubusercontent.com/Vegapunk-debug/VegaCLI/main/assets/demo.gif" alt="VegaCLI Animated Demo" width="700" style="border-radius: 10px;">
 
 <br/>
