@@ -1,11 +1,6 @@
-import { Command } from "commander"
+import { CommandBase } from "../cli_engine/CommandBase";
 
-export class MathCommands {
-    private program: Command
-
-    constructor(program: Command) {
-        this.program = program
-    }
+export class MathCommands extends CommandBase {
 
     public register() {
         this.program
