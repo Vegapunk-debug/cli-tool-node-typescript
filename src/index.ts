@@ -47,73 +47,73 @@ program
     console.log("Full Name:",firstname + " " + lastname)
 })
 
-program
-.command("sysinfo")
-.description("Displays system and OS information")
-.action(() => {
-    const os = require("os"); 
+// program
+// .command("sysinfo")
+// .description("Displays system and OS information")
+// .action(() => {
+//     const os = require("os"); 
 
-    console.log("\n --- System & OS Info ---")
-    console.log(`Hostname:      ${os.hostname()}`)
-    console.log(`Platform:      ${os.platform()} (${os.type()})`)
-    console.log(`OS Release:    ${os.release()}`)
-    console.log(`OS Version:    ${os.version()}`)
-    console.log(`Architecture:  ${os.arch()} / ${os.machine()}`)
-})
+//     console.log("\n --- System & OS Info ---")
+//     console.log(`Hostname:      ${os.hostname()}`)
+//     console.log(`Platform:      ${os.platform()} (${os.type()})`)
+//     console.log(`OS Release:    ${os.release()}`)
+//     console.log(`OS Version:    ${os.version()}`)
+//     console.log(`Architecture:  ${os.arch()} / ${os.machine()}`)
+// })
 
-program
-.command("time")
-.description("Displays the current local date and time")
-.action(() => {
-    const now = new Date()
-    console.log("\n --- Current Date & Time ---")
-    console.log(now.toLocaleString())
-})
+// program
+// .command("time")
+// .description("Displays the current local date and time")
+// .action(() => {
+//     const now = new Date()
+//     console.log("\n --- Current Date & Time ---")
+//     console.log(now.toLocaleString())
+// })
 
-program
-.command("express-base-code")
-.description("Generates a simple Express.js server boilerplate")
-.action(() => {
-    const fs = require('fs')
-    const serverCode = `const express = require('express')
-const app = express()
-const PORT = process.env.PORT || 3000
+// program
+// .command("express-base-code")
+// .description("Generates a simple Express.js server boilerplate")
+// .action(() => {
+//     const fs = require('fs')
+//     const serverCode = `const express = require('express')
+// const app = express()
+// const PORT = process.env.PORT || 3000
 
-app.use(express.json())
+// app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Server is running!' })
-})
+// app.get('/', (req, res) => {
+//   res.status(200).json({ message: 'Server is running!' })
+// })
 
-app.listen(PORT, () => {
-  console.log(\`Server listening on port \${PORT}\`)
-})`
+// app.listen(PORT, () => {
+//   console.log(\`Server listening on port \${PORT}\`)
+// })`
 
-    try {
+//     try {
 
-        fs.writeFileSync('server.js', serverCode)
-        console.log("\n Created server.js with a basic Express setup!\n")
+//         fs.writeFileSync('server.js', serverCode)
+//         console.log("\n Created server.js with a basic Express setup!\n")
 
-    } catch (err) {
-        console.log("\n Error creating file.\n")
-    }
-})
+//     } catch (err) {
+//         console.log("\n Error creating file.\n")
+//     }
+// })
 
-program
-.command("bcrypt-hash <password>")
-.description("Hashes a password using the bcrypt algorithm")
-.action(async (password: string) => {
-    const bcrypt = require("bcrypt")
-    const salt = 10
-    try {
-        const hash = await bcrypt.hash(password, salt)
-        console.log("\n Original Password:", password)
-        console.log("\n Hashed Password:", hash)
+// program
+// .command("bcrypt-hash <password>")
+// .description("Hashes a password using the bcrypt algorithm")
+// .action(async (password: string) => {
+//     const bcrypt = require("bcrypt")
+//     const salt = 10
+//     try {
+//         const hash = await bcrypt.hash(password, salt)
+//         console.log("\n Original Password:", password)
+//         console.log("\n Hashed Password:", hash)
         
-    } catch (error) {
-        console.log("Error: Could not hash password.", error.message)
-    }
-})
+//     } catch (error) {
+//         console.log("Error: Could not hash password.", error.message)
+//     }
+// })
 
 program
 .command("bcrypt-compare <password> <hash>")
