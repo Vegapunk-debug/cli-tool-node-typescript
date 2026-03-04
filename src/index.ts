@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 const {Command} = require("commander")
+const axios = require("axios")
 
 const program = new Command()
 
@@ -46,4 +47,31 @@ program
     console.log("Full Name:",firstname + " " + lastname)
 })
 
+
+
+// GITHUB API
+
+program
+.command("github <username>")
+.description("GitHub user info")
+.action(async (username: string) => {
+    try {
+            const response = await axios.get(`https://api.github.com/users/${username}`)
+            
+            console.log(`\n--- GitHub User: ${response.data.login} ---`)
+            console.log(`Name: ${response.data.name || "N/A"}`)
+            console.log(`Followers: ${response.data.followers}\n`)
+        } 
+        
+        catch (error) {
+            console.log("Error: Could not find user. Make sure the username exists.", error.message)
+        }
+    }
+)
+
+
+
+
 program.parse()
+
+
