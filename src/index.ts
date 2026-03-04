@@ -192,6 +192,22 @@ program
     }
 })
 
+program
+.command("anime-char <name>")
+.description("Fetches details about an anime character")
+.action(async (name: string) => {
+    try {
+
+        const response = await axios.get(`https://api.jikan.moe/v4/characters?q=${name}&limit=1`)
+        const character = response.data.data[0]
+        
+        console.log(`\n --- ${character.name} ---`)
+        console.log(`About: ${character.about ? character.about.substring(0, 200) + '...' : 'No bio available.'}`)
+    } catch (error: any) {
+        console.log("\n Error: Could not find that character. Try another name!\n")
+    }
+})
+
 program.parse()
 
 
