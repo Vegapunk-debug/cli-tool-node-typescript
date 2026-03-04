@@ -4,7 +4,7 @@ export class TextCommands extends CommandBase {
     public register(): void {
         this.program.command("greet <name>")
             .description("Greets the user")
-            .action((name: string) => console.log(`Hello ${name}`))
+            .action((name: string) => console.log(`Hello ${name} 👋👋👋`))
 
 
         this.program.command("Name <firstname> <lastname>")
