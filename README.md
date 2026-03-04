@@ -30,6 +30,34 @@
 
 VegaCLI is structured using Object-Oriented Programming (OOP) principles in TypeScript. Instead of writing all commands in a single massive file, the CLI is broken down into modular classes. Each class is responsible for a specific domain of commands and registers them with the main `Commander` program.
 
+### Project Structure
+
+```text
+├── assets/
+│   └── vega-banner.svg
+├── src/
+│   ├── index.ts
+│   ├── cli_engine/
+│   │   ├── CommandBase.ts
+│   │   └── VegaCLI.ts
+│   ├── commands/
+│   │   ├── ApiCommands.ts
+│   │   ├── CodeGeneratorCommands.ts
+│   │   ├── MathCommands.ts
+│   │   ├── SecurityCommands.ts
+│   │   ├── SystemCommands.ts
+│   │   └── TextCommands.ts
+│   └── services/
+│       ├── ApiService.ts
+│       ├── CodeGeneratorService.ts
+│       ├── SecurityService.ts
+│       └── SystemInfoService.ts
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+└── README.md
+```
+
 ### Core CLI Classes
 
 | Class Name | Primary Responsibility | Commands Handled |
