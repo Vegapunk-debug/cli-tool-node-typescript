@@ -102,7 +102,7 @@ app.listen(PORT, () => {
 program
 .command("bcrypt-hash <password>")
 .description("Hashes a password using the bcrypt algorithm")
-.action(async(password: string) => {
+.action(async (password: string) => {
     const bcrypt = require("bcrypt")
     const salt = 10
     try {
@@ -112,6 +112,30 @@ program
         
     } catch (error) {
         console.log("Error: Could not hash password.", error.message)
+    }
+})
+
+program
+.command("bcrypt-compare <password> <hash>")
+.description("Compares a plain text password against an existing bcrypt hash")
+.action(async (password: string, hash: string) => {
+    const bcrypt = require('bcrypt')
+    
+    try {
+
+        const isMatch = await bcrypt.compare(password, hash)
+        
+        console.log(`\n Password: ${password}`)
+        console.log(` Hash: ${hash}`)
+        
+        if (isMatch) {
+            console.log("Result: MATCH (Access Granted)\n")
+        } 
+        else {
+            console.log("Result: NO MATCH (Access Denied)\n")
+        }
+    } catch (error) {
+        console.log("\n Error comparing password to hash.", error.message)
     }
 })
 
