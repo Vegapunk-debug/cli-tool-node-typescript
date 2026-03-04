@@ -170,13 +170,27 @@ program
 
         const response = await axios.get(`https://wttr.in/${city}?format=3`)
         console.log(`\n Weather of ${city}: ${response.data}`)
-    } catch (error: any) {
+    } 
+    catch (error: any) {
         console.log("\n Error: Could not fetch weather for that location.\n",error.message)
     }
 })
 
+program
+.command("quote")
+.description("Fetches a random quote from the internet")
+.action(async () => {
+    try {
 
+        const response = await axios.get("https://dummyjson.com/quotes/random")
+        console.log(`\n "${response.data.quote}"`)
+        console.log(` — ${response.data.author}\n`)
 
+    } 
+    catch (error: any) {
+        console.log("\n Error: Could not fetch a quote right now.\n",error.message);
+    }
+})
 
 program.parse()
 
