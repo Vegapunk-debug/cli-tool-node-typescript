@@ -47,6 +47,20 @@ program
     console.log("Full Name:",firstname + " " + lastname)
 })
 
+program
+.command("sysinfo")
+.description("Displays system and OS information")
+.action(() => {
+    const os = require("os"); 
+
+    console.log("\n --- System & OS Info ---")
+    console.log(`Hostname:      ${os.hostname()}`)
+    console.log(`Platform:      ${os.platform()} (${os.type()})`)
+    console.log(`OS Release:    ${os.release()}`)
+    console.log(`OS Version:    ${os.version()}`)
+    console.log(`Architecture:  ${os.arch()} / ${os.machine()}`)
+})
+
 
 
 // GITHUB API
