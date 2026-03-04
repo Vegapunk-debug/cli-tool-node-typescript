@@ -99,6 +99,21 @@ app.listen(PORT, () => {
     }
 })
 
+program
+.command("bcrypt-hash <password>")
+.description("Hashes a password using the bcrypt algorithm")
+.action(async(password: string) => {
+    const bcrypt = require("bcrypt")
+    const salt = 10
+    try {
+        const hash = await bcrypt.hash(password, salt)
+        console.log("\n Original Password:", password)
+        console.log("\n Hashed Password:", hash)
+        
+    } catch (error) {
+        console.log("Error: Could not hash password.", error.message)
+    }
+})
 
 // GITHUB API
 
