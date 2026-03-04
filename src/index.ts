@@ -61,6 +61,43 @@ program
     console.log(`Architecture:  ${os.arch()} / ${os.machine()}`)
 })
 
+program
+.command("time")
+.description("Displays the current local date and time")
+.action(() => {
+    const now = new Date()
+    console.log("\n --- Current Date & Time ---")
+    console.log(now.toLocaleString())
+})
+
+program
+.command("express-base-code")
+.description("Generates a simple Express.js server boilerplate")
+.action(() => {
+    const fs = require('fs')
+    const serverCode = `const express = require('express')
+const app = express()
+const PORT = process.env.PORT || 3000
+
+app.use(express.json())
+
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Server is running!' })
+})
+
+app.listen(PORT, () => {
+  console.log(\`Server listening on port \${PORT}\`)
+})`
+
+    try {
+
+        fs.writeFileSync('server.js', serverCode)
+        console.log("\n Created server.js with a basic Express setup!\n")
+
+    } catch (err) {
+        console.log("\n Error creating file.\n")
+    }
+})
 
 
 // GITHUB API
